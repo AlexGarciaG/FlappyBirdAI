@@ -14,29 +14,23 @@
 <polygon fill="lightgray" stroke="black" points="40,-106.33 0,-106.33 0,-88.33 40,-88.33 40,-106.33"/>
 <text text-anchor="middle" x="20" y="-95.13" font-family="Times New Roman,serif" font-size="9.00">Bird y</text>
 </g>
-<!-- Jump -->
-<g id="node4" class="node">
-<title>Jump</title>
-<ellipse fill="lightblue" stroke="black" cx="96" cy="-26.16" rx="26.33" ry="26.33"/>
-<text text-anchor="middle" x="96" y="-23.96" font-family="Times New Roman,serif" font-size="9.00">Jump</text>
-</g>
-<!-- Bird y&#45;&gt;Jump -->
-<g id="edge1" class="edge">
-<title>Bird y&#45;&gt;Jump</title>
-<path fill="none" stroke="green" stroke-width="0.15" d="M29.02,-88.12C38.97,-79.06 55.45,-64.06 69.58,-51.21"/>
-<polygon fill="green" stroke="green" stroke-width="0.15" points="72.08,-53.66 77.12,-44.34 67.37,-48.48 72.08,-53.66"/>
-</g>
 <!-- Dist to pipe top -->
 <g id="node2" class="node">
 <title>Dist to pipe top</title>
 <polygon fill="lightgray" stroke="black" points="134,-106.33 58,-106.33 58,-88.33 134,-88.33 134,-106.33"/>
 <text text-anchor="middle" x="96" y="-95.13" font-family="Times New Roman,serif" font-size="9.00">Dist to pipe top</text>
 </g>
+<!-- Jump -->
+<g id="node4" class="node">
+<title>Jump</title>
+<ellipse fill="lightblue" stroke="black" cx="146" cy="-26.16" rx="26.33" ry="26.33"/>
+<text text-anchor="middle" x="146" y="-23.96" font-family="Times New Roman,serif" font-size="9.00">Jump</text>
+</g>
 <!-- Dist to pipe top&#45;&gt;Jump -->
-<g id="edge2" class="edge">
+<g id="edge1" class="edge">
 <title>Dist to pipe top&#45;&gt;Jump</title>
-<path fill="none" stroke="green" stroke-width="0.29" d="M96,-88.12C96,-81.71 96,-72.32 96,-62.82"/>
-<polygon fill="green" stroke="green" stroke-width="0.29" points="99.5,-62.61 96,-52.61 92.5,-62.61 99.5,-62.61"/>
+<path fill="none" stroke="green" stroke-width="0.36" d="M101.93,-88.12C107.68,-80.17 116.73,-67.65 125.14,-56.02"/>
+<polygon fill="green" stroke="green" stroke-width="0.36" points="128.07,-57.94 131.09,-47.78 122.4,-53.84 128.07,-57.94"/>
 </g>
 <!-- Dist to pipe bottom -->
 <g id="node3" class="node">
@@ -45,10 +39,10 @@
 <text text-anchor="middle" x="197" y="-95.13" font-family="Times New Roman,serif" font-size="9.00">Dist to pipe bottom</text>
 </g>
 <!-- Dist to pipe bottom&#45;&gt;Jump -->
-<g id="edge3" class="edge">
+<g id="edge2" class="edge">
 <title>Dist to pipe bottom&#45;&gt;Jump</title>
-<path fill="none" stroke="red" stroke-width="0.59" d="M185.02,-88.12C170.45,-78.15 145.36,-60.96 125.52,-47.38"/>
-<polygon fill="red" stroke="red" stroke-width="0.59" points="127.34,-44.38 117.11,-41.62 123.38,-50.16 127.34,-44.38"/>
+<path fill="none" stroke="red" stroke-width="0.35" d="M190.95,-88.12C185.09,-80.17 175.86,-67.65 167.28,-56.02"/>
+<polygon fill="red" stroke="red" stroke-width="0.35" points="169.96,-53.75 161.2,-47.78 164.32,-57.91 169.96,-53.75"/>
 </g>
 </g>
 </svg>

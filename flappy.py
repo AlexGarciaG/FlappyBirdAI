@@ -30,7 +30,8 @@ class flappyGame :
 
         self.gen = 0
         #Back ground
-        self.ticks = 120
+        self.ticks = 30
+        self.ticksTrain = 120
         self.birds = []
         self.nets = []
         self.ge   = []
@@ -74,6 +75,21 @@ class flappyGame :
         self.x_Play_Logistic = self.WINDOW_WIDTH/2-(len(self.message_Play_Logistic)*self.xOrigin)-self.xPadding
         self.y_Play_Logistic = self.y_Play_Neural-self.yPadding+self.butonGap
         self.width_Play_Logistic = (len(self.message_Play_Logistic)*self.wightSize)+self.xPadding
+
+            #Settings
+        self.message_Settings = "Settings"
+        self.x_Settings = self.WINDOW_WIDTH/2-(len(self.message_Settings)*self.xOrigin)-self.xPadding
+        self.y_Settings = self.y_Play_Logistic-self.yPadding+self.butonGap
+        self.width_Settings = (len(self.message_Settings)*self.wightSize)+self.xPadding
+
+            #Documentation
+        self.message_Documentation = "Documentation"
+        self.x_Documentation = self.WINDOW_WIDTH/2-(len(self.message_Documentation)*self.xOrigin)-self.xPadding
+        self.y_Documentation = self.y_Settings-self.yPadding+self.butonGap
+        self.width_Documentation = (len(self.message_Documentation)*self.wightSize)+self.xPadding
+
+
+
         #Genetic Algorithm
         self.livesPerGen = 5
             #Exit
@@ -122,7 +138,7 @@ class flappyGame :
         score = 0
         while run:
             #clock delay
-            clock.tick(self.ticks )
+            clock.tick(self.ticksTrain )
             #Lock if game window is closed
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -381,6 +397,18 @@ class flappyGame :
         pygame.draw.rect(self.win, self.back_button, [self.x_Play_Logistic, self.y_Play_Logistic ,self.width_Play_Logistic , self.button_height])
         text = STAT_FONT.render(self.message_Play_Logistic,1,self.letter_button)
         self.win.blit(text,(self.x_Play_Logistic+self.xPadding,self.y_Play_Logistic+self.yPadding))
+
+        #Settings
+        pygame.draw.rect(self.win, self.back_button, [self.x_Settings, self.y_Settings ,self.width_Settings , self.button_height])
+        text = STAT_FONT.render(self.message_Settings,1,self.letter_button)
+        self.win.blit(text,(self.x_Settings+self.xPadding,self.y_Settings+self.yPadding))
+
+        #Documentation
+        pygame.draw.rect(self.win, self.back_button, [self.x_Documentation, self.y_Documentation ,self.width_Documentation , self.button_height])
+        text = STAT_FONT.render(self.message_Documentation,1,self.letter_button)
+        self.win.blit(text,(self.x_Documentation+self.xPadding,self.y_Documentation+self.yPadding))
+
+
         pygame.display.update()
 
     def back_ground_play (self):
@@ -469,7 +497,14 @@ class flappyGame :
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     if (self.x_Play_Logistic <= self.mouse[0] <= self.x_Play_Logistic+self.width_Play_Logistic) and (self.y_Play_Logistic <= self.mouse[1] <= self.y_Play_Logistic+self.button_height):
                         print("Play Logistic Regression")
-
+                #Regression
+                if event.type == pygame.MOUSEBUTTONDOWN:
+                    if (self.x_Settings <= self.mouse[0] <= self.x_Settings+self.width_Settings) and (self.y_Settings <= self.mouse[1] <= self.y_Settings+self.button_height):
+                        print("Settings")
+                #Documentation
+                if event.type == pygame.MOUSEBUTTONDOWN:
+                    if (self.x_Documentation <= self.mouse[0] <= self.x_Documentation+self.width_Documentation) and (self.y_Documentation <= self.mouse[1] <= self.y_Documentation+self.button_height):
+                        print("Documentation")
 if __name__ == '__main__':
     local_dir   = os.path.dirname(__file__)
     config_path = os.path.join(local_dir,"config-feedforward.txt")
